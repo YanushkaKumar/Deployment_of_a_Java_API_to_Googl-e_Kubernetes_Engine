@@ -1,0 +1,16 @@
+# k8s/09-servicemonitor.yaml
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: java-api-servicemonitor
+  namespace: java-api-ns-yanushka # <-- Your app's namespace
+  labels:
+    release: prometheus # <-- Connects it to your Prometheus installation
+spec:
+  selector:
+    matchLabels:
+      app: java-api # <-- The label on your java-api-service
+  endpoints:
+    - port: http
+      path: '/actuator/prometheus' # The metrics path provided by Spring Boot
+      interval: 15s
