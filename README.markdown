@@ -86,7 +86,8 @@ The API provides endpoints like `/health` and `/api/users`, serving sample JSON 
    curl http://localhost:8080/api/users
    ```
 
-   **[Insert Screenshot Here: Local Docker Test Output]**  
+   <img width="975" height="548" alt="image" src="https://github.com/user-attachments/assets/9d7a22ef-cd44-4a80-9dd5-7f018ee6c0e3" />
+
    *(e.g., Terminal showing successful Docker build and curl responses for `/health` and `/api/users`.)*
 
 ### Phase 3: Google Artifact Registry
