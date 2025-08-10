@@ -107,7 +107,8 @@ The API provides endpoints like `/health` and `/api/users`, serving sample JSON 
    docker push $REGION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY_NAME/java-api:1.0.0
    ```
 
-   **[Insert Screenshot Here: Artifact Registry Push Confirmation]**  
+   <img width="975" height="517" alt="image" src="https://github.com/user-attachments/assets/bd67be35-2e6c-48ea-a85c-54334586ecbf" />
+ 
    *(e.g., GCP console or terminal output showing the image in Artifact Registry.)*
 
 ### Phase 4: Kubernetes Deployment
@@ -131,7 +132,11 @@ The API provides endpoints like `/health` and `/api/users`, serving sample JSON 
    kubectl get all -n java-api-ns-yanushka
    ```
 
-   **[Insert Screenshot Here: Kubernetes Resources Overview]**  
+   <img width="975" height="548" alt="image" src="https://github.com/user-attachments/assets/89f10692-802f-453d-b119-08b47bea45ca" />
+
+   <img width="975" height="515" alt="image" src="https://github.com/user-attachments/assets/1e26e3f0-1c8a-42d3-b1a9-0521a3e99fec" />
+
+ 
    *(e.g., Output of `kubectl get all -n java-api-ns-yanushka` showing pods, services, deployment, and HPA in READY state.)*
 
 ### Phase 5: Ingress and TLS
@@ -154,7 +159,12 @@ The API provides endpoints like `/health` and `/api/users`, serving sample JSON 
    kubectl apply -f k8s/08-ingress.yaml
    ```
 
-   **[Insert Screenshot Here: Ingress and TLS Certificate Status]**  
+   <img width="975" height="517" alt="image" src="https://github.com/user-attachments/assets/b04de867-4451-49e1-b50b-2f92d78e1732" />
+
+   <img width="975" height="514" alt="image" src="https://github.com/user-attachments/assets/a5432761-7a40-45a9-8cb8-0b4cea58115a" />
+
+   <img width="975" height="519" alt="image" src="https://github.com/user-attachments/assets/bc1351b6-ba40-4f20-9854-ca9bddaf9cb3" />
+   
    *(e.g., Output of `kubectl get ingress -n java-api-ns-yanushka` and `kubectl get certificate -n java-api-ns-yanushka` showing ADDRESS and READY status.)*
 
 ### Phase 6: Testing and Verification
@@ -169,16 +179,18 @@ The API provides endpoints like `/health` and `/api/users`, serving sample JSON 
    [{"id":1,"name":"John Doe","email":"john@example.com"},{"id":2,"name":"Jane Smith","email":"jane@example.com"}]
    ```
 
-   **[Insert Screenshot Here: Curl Testing Output]**  
+  <img width="975" height="516" alt="image" src="https://github.com/user-attachments/assets/c34c7f20-bd48-4148-9b74-cb7b00f5bf72" />
+ 
    *(e.g., Terminal showing curl command and JSON response over HTTPS.)*
 
 2. **Browser Verification**:
    Access `https://apiyanushka.duckdns.org/api/users` in a browser. Verify the secure lock icon.
 
-   **[Insert Screenshot Here: Browser API Access]**  
+   <img width="975" height="548" alt="image" src="https://github.com/user-attachments/assets/a4474932-ce81-4411-b2af-cbf5bdbf2b19" />
+
    *(e.g., Browser displaying JSON response with HTTPS lock icon.)*
 
-### Phase 7: Monitoring (Bonus)
+### Phase 7: Monitoring 
 
 1. **Install Monitoring Stack**:
    ```bash
@@ -192,7 +204,10 @@ The API provides endpoints like `/health` and `/api/users`, serving sample JSON 
 3. **Grafana Dashboard**:
    Visualizes JVM memory, CPU usage, and API request rates.
 
-   **[Insert Screenshot Here: Grafana Metrics Dashboard]**  
+  <img width="975" height="515" alt="image" src="https://github.com/user-attachments/assets/32e59029-f714-4074-a15c-9afe236bf817" />
+
+ <img width="975" height="514" alt="image" src="https://github.com/user-attachments/assets/9773090f-54d4-4386-ac1e-9d6fdbdf018b" />
+
    *(e.g., Grafana showing graphs for CPU, memory, and API metrics.)*
 
 ### Utility Scripts
@@ -201,11 +216,15 @@ The API provides endpoints like `/health` and `/api/users`, serving sample JSON 
    ```bash
    ./scripts/monitor.sh
    ```
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/7da845c3-5b95-42f9-a005-107c2c432b63" />
+
 
 - **cleanup.sh**: Removes Kubernetes resources and local images.
    ```bash
    ./scripts/cleanup.sh
    ```
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/01d13b1a-8fe7-41d5-9380-1f61f5d98a36" />
+
 
 ## Troubleshooting
 
@@ -229,6 +248,4 @@ The API provides endpoints like `/health` and `/api/users`, serving sample JSON 
 
 ## Conclusion
 
-This project successfully delivers a production-ready Java API deployment on GKE, meeting all assignment criteria and incorporating bonus features like monitoring and autoscaling. The setup ensures security, scalability, and observability, with comprehensive testing on August 10, 2025, confirming stability under load.
-
-For further details, refer to `docs/Final_Report.pdf`. Please contact me for repository access or clarification.
+This project successfully demonstrated the end-to-end process of deploying a containerized Java application to Kubernetes. All core objectives were met, including containerization, deployment, secure ingress configuration, and testing. The implementation of bonus features like monitoring and security policies further elevates the deployment to a production-ready standard.
