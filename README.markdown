@@ -11,7 +11,7 @@ This repository contains the source code, configuration, and documentation for d
 
 **Author**: Yanushka  
 **Date**: August 10, 2025  
-**Course**: DevOps Assignment  
+
 
 ### Objectives
 - Containerize a Java Spring Boot application using a multi-stage Dockerfile.
